@@ -1,0 +1,317 @@
+:root {
+    --bg: #F8FFF4; /*background*/
+    --fg: black;
+    --hc: #2C5F2D; /* header e footer*/
+    --lt: #8EE5B5; /*links e titulos*/
+    --bg2: #DFFBEF;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+li {
+    list-style-type: circle;
+}
+
+img {
+    border-radius: 15px;
+}
+
+h1 { /* titulo*/
+    text-align: center;
+    color: var(--lt);
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+}
+
+.site-header { /*classe - ponto */
+    border-bottom: 1px solid beige;
+    padding: 0.3rem;
+    text-align: center;
+    background-color: var(--hc);
+}
+
+.nav {
+    list-style: none;   
+    padding: 15px;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav li {
+    list-style-type: none;
+}
+
+.nav a{
+    text-decoration: none;
+    color: var(--lt);
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.nav li:hover a {
+    color: rgb(232, 255, 248);
+}
+
+#container {
+    margin: 1rem;
+    text-align: center;
+    gap: 20px;
+}
+
+.site-header .container {
+    display: flex;
+    flex-direction: row; /*lado a lado*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#container h3 {
+    text-align: center;
+    color: #4F8A57;
+}
+
+
+
+#container p{
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+h2 {
+    color: #2C5F2D;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+#sobre p {
+    text-align: justify;
+}
+
+#sobre img {
+    width: 100%;
+    max-width: 750px;
+    height: auto; /* mantem proporcao*/
+}
+
+#atrativos {
+    background-color: var(--bg2);
+    padding: 40px 20px;
+    border-radius: 10px;
+
+}
+
+.galeria-atrativos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    /* margin-top: 20px; */
+}
+
+.galeria-atrativos figure {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    width: 450px;
+    text-align: center;
+    justify-content: center;
+}
+
+.galeria-atrativos img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.galeria-atrativos figcaption {
+    color: #2C5F2D;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#gastronomia p {
+    text-align: justify;
+    justify-content: center;
+    padding: 5px;
+    padding-left: 320px;
+    padding-right: 320px;
+
+}
+
+#trivia {
+    display: block;
+    width: 100%;
+    background-color: var(--bg2);
+    padding: 10px 10px;
+    border-radius: 0px;
+
+}
+
+#trivia img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.lista-curiosidades {
+    list-style-type: circle;
+    list-style-position: inside; 
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    justify-content: center;
+   
+}
+
+.lista-curiosidades li {
+    padding: 8px 0;
+    font-size: 18px;
+}
+
+#fale {
+    background-color: var(--bg);
+    padding: 20px 20px;
+    text-align: center;
+}
+
+#fale form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#fale label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: var(--hc);
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+#fale input[type="text"],
+#fale input[type="email"],
+#fale textarea {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid var(--lt);
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: #f5fff8;
+}
+
+
+#fale textarea {
+    height: 120px;
+    resize: none;
+}
+
+
+#fale #botao-enviar {
+    margin-top: 20px;
+    background-color: var(--lt);
+   color: #2C5F2D;
+    font-weight: bold;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#fale #botao-enviar:hover{
+     background-color: #2C5F2D; /* verde escuro */
+    color: white;
+}
+
+
+#site-footer {
+    background-color: var(--hc);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        flex-direction: column; /*lado a lado*/
+       
+    }
+
+    .site-header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .nav {
+        padding: 0 25px; /* afasta lateralmente */
+        flex-wrap: wrap; /*quebra de linha */
+        justify-content: center; 
+        gap: 10px 20px; /*esp vertical e horizontal*/
+    }
+    
+    .nav a {
+        padding: 5px 10px;
+        display: block;
+    }
+   
+    #atrativos p {
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .galeria-atrativos {
+        padding: 0 15px;
+    }
+
+    /* figuras tela inteira */
+    .galeria-atrativos figure {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+   
+    #gastronomia p {
+        text-align: justify;
+         padding: 10px 20px;
+
+    }
+
+    #trivia ul {
+        text-align: center;
+        padding: 0;
+    }
+
+}
