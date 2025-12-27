@@ -5,7 +5,7 @@ const atrativos = [
         new AtrativoModel({
             id: 1,
             nome: "Cachoeira do Cipó",
-            descricao: "Localizada a 8km de Guaramiranga",
+            descricao: "A cachoeira do Cipó fica localizada na cidade de Baturité, há 8km do centro de Guaramiranga.",
             imagem: "cipo.jpg"
         }),
         new AtrativoModel({
@@ -28,6 +28,12 @@ const atrativos = [
         }),
         new AtrativoModel({
             id: 5,
+            nome: "Pico Alto",
+            descricao: "Pico Alto é o nome dado à terceira montanha mais alta do estado do Ceará, no nordeste do Brasil. O pico se eleva a 1.115 metros acima do nível do mar. ",
+            imagem: "picoalto.png"
+        }),
+        new AtrativoModel({
+            id: 6,
             nome: "Cachoeira do Perigo",
             descricao: "A Cachoeira do Perigo fica localizada há 10km de Guaramiranga.",
             imagem: "perigo.jpg"

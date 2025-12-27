@@ -23,4 +23,32 @@ async function carregarAtrativos() {
     });
 }
 
+async function carregarGastronomia() {
+    const response = await fetch("http://localhost:3000/api/gastronomia/listarGastronomia");
+    
+    if (!response.ok) {
+        throw new Error("Erro ao buscar a gastronomia")
+    }
+    const gastronomicos = await response.json();
+
+    const section = document.getElementById("gastronomia");
+    const referencia = section.querySelector("p");
+
+
+    gastronomicos.forEach(gastronomico => {
+        const aside = document.createElement("aside");
+
+        aside.innerHTML = `
+        <h3>${gastronomico.nome}</h3>
+        <figure>
+            <img src="${gastronomico.imagem}" alt="${gastronomico.alt}" />
+        </figure>
+        <p><cite>${gastronomico.descricao}</cite></p>
+        `
+
+        section.appendChild(aside)
+    });
+}
+
 carregarAtrativos();
+carregarGastronomia();

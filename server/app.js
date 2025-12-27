@@ -2,12 +2,14 @@ const express = require("express")
 const path = require("path")
 
 const atrativoRouter = require('./controllers/AtrativoController.js')
+const gastronomiaRouter = require('./controllers/GastronomiaController.js')
 
 const app = express()
 const PORT = 3000
 
 app.use(express.static(path.join(__dirname, "..")))
 app.use('/api/atrativos', atrativoRouter);  
+app.use('/api/gastronomia', gastronomiaRouter);
 app.listen(
     PORT,
     () => {

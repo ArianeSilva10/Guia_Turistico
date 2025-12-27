@@ -12,7 +12,7 @@ class AtrativoService {
     async buscarPorId(id){
         const atrativoEncontrado = atrativoRepository(id)
         if (atrativoEncontrado) {
-            return new AtrativoDTO(atrativoEncontrado)
+            return new atrativoDTO(atrativoEncontrado)
         }else
             return null
     }
