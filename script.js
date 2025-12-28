@@ -1,5 +1,7 @@
+const PATH = 'http://localhost:3000/api'
+
 async function carregarAtrativos() {
-    const response = await fetch("http://localhost:3000/api/atrativos/ListarAtrativos")
+    const response = await fetch(`${PATH}/atrativos/ListarAtrativos`)
     const atrativos = await response.json()
 
     if(!response.ok){
@@ -24,7 +26,7 @@ async function carregarAtrativos() {
 }
 
 async function carregarGastronomia() {
-    const response = await fetch("http://localhost:3000/api/gastronomia/listarGastronomia");
+    const response = await fetch(`${PATH}/gastronomia/listarGastronomia`);
     
     if (!response.ok) {
         throw new Error("Erro ao buscar a gastronomia")
@@ -32,8 +34,6 @@ async function carregarGastronomia() {
     const gastronomicos = await response.json();
 
     const section = document.getElementById("gastronomia");
-    const referencia = section.querySelector("p");
-
 
     gastronomicos.forEach(gastronomico => {
         const aside = document.createElement("aside");
@@ -50,5 +50,26 @@ async function carregarGastronomia() {
     });
 }
 
+async function carregarCuriosidades() {
+    const response = await fetch(`${PATH}/curiosidades/listarCuriosidades`);
+
+    if (!response.ok) {
+        throw new Error("Erro ao buscar as curiosidades");
+    }
+
+    const curiosidades = await response.json();
+
+    const ul = document.getElementById("curiosidades-id");
+
+    curiosidades.forEach(curiosidade => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `${curiosidade.descricao}`
+
+        ul.appendChild(li);
+    });
+}
+
 carregarAtrativos();
 carregarGastronomia();
+carregarCuriosidades();
