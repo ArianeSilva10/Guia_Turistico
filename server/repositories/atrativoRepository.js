@@ -10,9 +10,9 @@ const atrativos = [
         }),
         new AtrativoModel({
             id: 2,
-            nome: "Pico Alto",
-            descricao: "Terceira montanha mais alta do Ceará",
-            imagem: "picoalto.png"
+            nome: "Teatro Municipal",
+            descricao: "Localizado na Rua Joaquim Alves Nogueira, bairro Centro, o Teatro Municipal de Guaramiranga está localizado na Praça Central de Guaramiranga-CE.",
+            imagem: "teatromunicipal.jpg"
         }),
         new AtrativoModel({
             id: 3,
