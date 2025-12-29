@@ -1,6 +1,12 @@
-acesso: 
-- `` cd server ``
-- `` npm install ``
-- `` node app.js ``
+Acesso:
+``` bash
+cd server
+```
 
-- abrir http://localhost:3000
+```bash
+npm install
+``` 
+
+```bash
+node app.js
+```
